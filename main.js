@@ -28,6 +28,6 @@ client.on('message', message => {
 });
 
 
-
-client.login('ODQ1ODUzMTU3NjQ4NjI5NzYx.YKnAIw.l7F9uWGW1F7ZwigHjXb4OFPMRvE');
+const token ="";
+client.login(token);
 
