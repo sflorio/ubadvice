@@ -1,0 +1,14 @@
+{
+  "name": "ubadvice",
+  "version": "1.0.0",
+  "description": "This bot gives you advices when you do not know how to handle with your universitary life",
+  "main": "main.js",
+  "scripts": {
+    "test": "advice"
+  },
+  "author": "Sebastian Florio",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
