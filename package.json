@@ -9,6 +9,8 @@
   "author": "Sebastian Florio",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.6",
     "discord.js": "^12.5.3"
   }
+  
 }

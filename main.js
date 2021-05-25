@@ -1,9 +1,10 @@
+require("./initialConfig").init();
+
+const config = require('config');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
-
+const CommandFactory = require("./commands/commadFactory");
 const prefix = '/';
-
 
 
 client.once('ready',()=>{
@@ -15,19 +16,13 @@ client.on('message', message => {
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLocaleLowerCase();
-
-    if( command === 'ping'){
-        message.channel.send('pong!')
-    }
-
-    if( command === 'question'){
-        message.channel.send('tranqui man')
-    }
-
+    
+    var objCommand = CommandFactory.create(command);
+    message.channel.send(objCommand.action());
 
 });
 
 
-const token ="";
+const token = config.get("discordToken");
 client.login(token);
 
