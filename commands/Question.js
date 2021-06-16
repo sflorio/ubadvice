@@ -1,4 +1,4 @@
-const CommandBase = require("./commandBase");
+const CommandBase = require("./core/commandBase");
 
 class Question extends CommandBase {
     constructor(){

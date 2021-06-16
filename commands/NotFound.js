@@ -1,4 +1,4 @@
-const CommandBase = require("./commandBase");
+const CommandBase = require("./core/commandBase");
 
 class NotFound extends CommandBase{
     constructor(){

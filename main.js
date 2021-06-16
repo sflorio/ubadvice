@@ -3,12 +3,16 @@ require("./initialConfig").init();
 const config = require('config');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const CommandFactory = require("./commands/commadFactory");
-const prefix = '/';
+const CommandFactory = require("./commands/core/commadFactory");
+const prefix = '';//'/';
 
 
 client.once('ready',()=>{
     console.log('ubadvice is online!');
+});
+
+client.on("disconnect", message => {
+    message.channel.send("bye bye!");
 });
 
 client.on('message', message => {
@@ -18,7 +22,7 @@ client.on('message', message => {
     const command = args.shift().toLocaleLowerCase();
     
     var objCommand = CommandFactory.create(command);
-    message.channel.send(objCommand.action());
+    message.channel.send(objCommand.action(message));    
 
 });
 
