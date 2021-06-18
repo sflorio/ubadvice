@@ -4,7 +4,7 @@ const config = require('config');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const CommandFactory = require("./commands/core/commadFactory");
-const prefix = '';//'/';
+const prefix = '/';
 
 
 client.once('ready',()=>{
