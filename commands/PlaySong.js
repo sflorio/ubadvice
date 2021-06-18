@@ -28,7 +28,7 @@ class PlaySong extends CommandBase {
             })
             .catch(console.error);
 
-        return "Playing a little song to melt iced hearts...";
+        return "Playing a little song to melt frozen hearts...";
     }
 
 }
